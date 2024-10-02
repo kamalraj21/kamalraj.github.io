@@ -1,32 +1,63 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
     margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: #333;
+    background: #444;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px;
     text-align: center;
 }
 
-nav a {
+header nav a {
     color: #fff;
-    margin: 0 15px;
     text-decoration: none;
+    margin: 0 15px;
+}
+
+h1, h2, h3 {
+    color: #333;
 }
 
 section {
     padding: 20px;
-    margin: 20px;
-    background-color: #fff;
+    margin: 20px 0;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.skills-grid, .portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skill-item, .portfolio-item {
+    margin: 10px;
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 footer {
+    background: #444;
+    color: #fff;
     text-align: center;
     padding: 10px;
-    background-color: #333;
-    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
