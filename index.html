@@ -4,57 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamal Raj | Technical Writer Portfolio</title>
-    <link rel="stylesheet" href="styles.css?v=1.1">
+    <link rel="stylesheet" href="styles.css?v=1.2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        /* Additional styles for pop-up card */
-        .skill-popup {
-            display: none; /* Hidden by default */
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 500px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
-            opacity: 0; /* Initial opacity for fade-in */
-            animation: fadeIn 0.3s ease-in-out; /* Animation duration and effect */
-        }
-
-        /* Fade-in animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Show popup with animation */
-        .show-popup {
-            display: block;
-            opacity: 1; /* Make it fully visible */
-        }
-
-        /* Background overlay */
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 500;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -70,43 +21,34 @@
 
     <section id="about" class="section">
         <h2>About Me</h2>
-        <p>I am a seasoned Technical Writer and Content Strategist with over 13 years of experience in delivering high-quality documentation across AI, IoT, edge computing, and enterprise software domains. I specialize in transforming complex technical concepts into clear, accessible content, ensuring a seamless user experience. I collaborate closely with UX architects, engineering teams, and key stakeholders to develop comprehensive documentation frameworks that drive product adoption and user satisfaction.</p>
+        <p>I am a seasoned Technical Writer and Content Strategist with over 13 years of experience in delivering high-quality documentation across AI, IoT, edge computing, and enterprise software domains. I specialize in transforming complex technical concepts into clear, accessible content, ensuring a seamless user experience.</p>
     </section>
 
     <section id="skills" class="section">
         <h2>My Skills</h2>
+        <p class="context-line">Click on each skill to discover detailed insights and see available writing samples.</p>
         <div class="skills-grid">
-            <!-- Technical Writing Card (First Skill) -->
+            <!-- Skill Cards -->
             <div class="skill-item" onclick="showPopup('techWritingPopup')">
                 <i class="fas fa-file-alt"></i>
                 <p>Technical Writing</p>
             </div>
-
-            <!-- API Documentation Card -->
             <div class="skill-item" onclick="showPopup('apiPopup')">
                 <i class="fas fa-code"></i>
                 <p>API Documentation</p>
             </div>
-
-            <!-- Content Strategy Card -->
             <div class="skill-item" onclick="showPopup('contentStrategyPopup')">
                 <i class="fas fa-cogs"></i>
                 <p>Content Strategy & Operations</p>
             </div>
-
-            <!-- Information Architecture Card -->
             <div class="skill-item" onclick="showPopup('infoArchitecturePopup')">
                 <i class="fas fa-sitemap"></i>
                 <p>Information Architecture</p>
             </div>
-
-            <!-- Docs-as-Code Practices Card -->
             <div class="skill-item" onclick="showPopup('docsAsCodePopup')">
                 <i class="fas fa-laptop-code"></i>
                 <p>Docs-as-Code Practices</p>
             </div>
-
-            <!-- UX Writing Card -->
             <div class="skill-item" onclick="showPopup('uxWritingPopup')">
                 <i class="fas fa-pencil-alt"></i>
                 <p>UX Writing & User-Centric Documentation</p>
@@ -116,7 +58,6 @@
 
     <!-- Skill Pop-up Cards -->
     <div class="overlay" onclick="closePopup()"></div>
-
     <div id="techWritingPopup" class="skill-popup">
         <div class="close-btn"><button onclick="closePopup()">Close</button></div>
         <h3>Technical Writing</h3>
@@ -161,30 +102,43 @@
 
     <section id="portfolio" class="section">
         <h2>Portfolio Highlights</h2>
+        <p class="context-line">Here are some samples of my work, showcasing my experience across various domains.</p>
         <div class="portfolio-grid">
+            <!-- Portfolio Items -->
             <div class="portfolio-item">
                 <img src="images/user-guide.png" alt="User Guide Thumbnail">
                 <h3>User Guide</h3>
-                <p>A detailed, step-by-step guide for building and deploying ML models on the Unified AI Platform.</p>
+                <p class="description">A detailed, step-by-step guide for building and deploying ML models on the Unified AI Platform.</p>
                 <a href="sample1.html" class="btn">View Sample</a>
             </div>
             <div class="portfolio-item">
                 <img src="images/manual-book.png" alt="API Documentation Thumbnail">
                 <h3>API Documentation</h3>
-                <p>Comprehensive API documentation for managing models programmatically on the Unified AI Platform.</p>
+                <p class="description">Comprehensive API documentation for managing models programmatically on the Unified AI Platform.</p>
                 <a href="sample2.html" class="btn">View Sample</a>
             </div>
             <div class="portfolio-item">
                 <img src="images/persona.png" alt="Persona-Based Guide Thumbnail">
                 <h3>Persona-Based User Guide</h3>
-                <p>Role-specific documentation tailored for developers, system administrators, and business users.</p>
+                <p class="description">User-centric documentation tailored for developers, system administrators, and business users.</p>
                 <a href="sample3.html" class="btn">View Sample</a>
             </div>
-            <!-- Add CV download link -->
             <div class="portfolio-item">
-                <img src="images/manual-book.png" alt="CV Thumbnail">
+                <img src="images/online-help.png" alt="In-App Help Content Thumbnail">
+                <h3>In-App Help Content</h3>
+                <p class="description">A collection of in-app help content tailored to provide contextual assistance within the product.</p>
+                <a href="samples/in-app-help-sample-examples.pdf" class="btn">View Sample</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/shopping-portal.png" alt="Shopping Portal Guide Thumbnail">
+                <h3>Shopping Portal User Guide</h3>
+                <p class="description">A detailed user guide that covers how to create an account, update profile information, view products, and complete an order on the shopping portal.</p>
+                <a href="samples/Writing sample2_Shopping_portal_User_Guide.pdf" class="btn">View Sample</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/cv.png" alt="CV Thumbnail">
                 <h3>My CV</h3>
-                <p>Download my latest CV in PDF format to explore my full professional background.</p>
+                <p class="description">Download my latest CV in PDF format to explore my full professional background.</p>
                 <a href="samples/Kamal-Raj-CV-Technical-Writer.pdf" class="btn">Download CV</a>
             </div>
         </div>
@@ -205,20 +159,17 @@
 
     <script>
         function showPopup(id) {
-            // Close any open popups
             var popups = document.querySelectorAll('.skill-popup');
             popups.forEach(function(popup) {
                 popup.classList.remove('show-popup');
             });
 
-            // Open the clicked popup
             var element = document.getElementById(id);
             element.classList.add('show-popup');
             document.querySelector('.overlay').style.display = 'block';
         }
 
         function closePopup() {
-            // Close the currently open popup
             var popups = document.querySelectorAll('.skill-popup');
             popups.forEach(function(popup) {
                 popup.classList.remove('show-popup');

@@ -5,45 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Documentation - Kamal Raj</title>
     <link rel="stylesheet" href="styles.css?v=1.1">
+    <!-- Include Swagger UI CSS for styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui.css">
 </head>
 <body>
     <header>
         <h1>API Documentation</h1>
         <nav>
             <a href="index.html">Home</a> |
-            <a href="portfolio.html">Portfolio</a> |
-            <a href="contact.html">Contact</a>
+            <a href="technical-writing.html">Technical Writing</a> |
+            <a href="content-strategy.html">Content Strategy</a> |
+            <a href="information-architecture.html">Information Architecture</a> |
+            <a href="docs-as-code.html">Docs-as-Code Practices</a>
         </nav>
     </header>
 
     <section id="breadcrumbs" class="section">
-        <p><a href="index.html">Home</a> > <a href="index.html#skills">Skills</a> > Technical Writing</p>
+        <p><a href="index.html">Home</a> > <a href="index.html#skills">Skills</a> > API Documentation</p>
     </section>
 
+    <!-- Overview Section -->
     <section class="section">
         <h2>Overview</h2>
-        <p>I specialize in crafting comprehensive API documentation, covering endpoint references, sample code snippets, usage guidelines, and error-handling instructions. I collaborate closely with engineering teams to create guides that facilitate seamless integration for developers.</p>
+        <p>API documentation plays a critical role in modern software development, serving as a bridge between developers and the functionality provided by APIs. My approach to API documentation focuses on creating clear, detailed, and user-friendly guides that facilitate seamless integration and implementation of APIs. By providing comprehensive endpoint descriptions, request and response examples, error handling, and authentication details, I ensure that developers have the information they need to use APIs efficiently and effectively.</p>
+    </section>
 
-        <h2>Work Samples</h2>
+    <!-- Value Proposition Section -->
+    <section class="section">
+        <h2>Value Proposition</h2>
+        <p>I specialize in creating comprehensive API documentation that simplifies complex processes and enables developers to integrate and utilize APIs effectively. My documentation approach emphasizes clarity, consistency, and accuracy to enhance developer experience and reduce support tickets.</p>
         <ul>
-            <li><a href="samples/sample2.pdf">Unified AI Platform API Guide</a> – A detailed guide for managing AI models programmatically using API endpoints.</li>
+            <li><strong>Comprehensive Endpoint Descriptions:</strong> Documented endpoints with detailed information on parameters, request bodies, response codes, and potential errors to guide developers through the integration process.</li>
+            <li><strong>Example Requests and Responses:</strong> Provided real-world examples using tools like Swagger and Postman to help developers understand the practical usage of each API endpoint.</li>
+            <li><strong>Authentication and Security:</strong> Included instructions for implementing secure API authentication, such as OAuth, API keys, or JWT, ensuring secure interactions between applications.</li>
+            <li><strong>Error Handling and Troubleshooting:</strong> Documented common error responses and troubleshooting steps, helping developers quickly identify and resolve issues during API implementation.</li>
         </ul>
+    </section>
 
-        <section class="section">
-            <h2>Swagger/OpenAPI Documentation</h2>
-            <p>You can view the detailed Swagger/OpenAPI specification for the API using the link below or import it into Swagger Editor:</p>
-            <a href="https://kamalraj21.github.io/kamalraj.github.io/samples/openapi3_0.yaml" class="btn" target="_blank">View OpenAPI Specification</a>
-            <p>Or, you can paste the link into the <a href="https://editor.swagger.io/" target="_blank">Swagger Editor</a> to interact with the API:</p>
-            <code>https://<username>.github.io/<repository>/samples/openapi3_0.yaml</code>
-        </section>
-        
+    <!-- Interactive API Documentation Section -->
+    <section class="section">
+        <h2>Interactive API Documentation (Swagger UI)</h2>
+        <p>This embedded Swagger UI demonstrates a sample API reference for the EdgeXFoundry IoT Platform, showcasing a comprehensive set of endpoints, methods, parameters, and response structures. The interactive nature of this documentation allows developers to explore and test the API directly within their browsers.</p>
+        <div id="swagger-ui" class="swagger-container"></div>
+    </section>
 
-        <h2>Tools & Technologies</h2>
-        <p>Swagger, Postman, Markdown, GitHub, RESTful APIs</p>
+    <!-- Writing Samples Section -->
+    <section id="writing-samples" class="section">
+        <h2>Writing Samples</h2>
+        <p>Below are some examples of API documentation I have created, demonstrating my expertise in delivering detailed and developer-friendly guides.</p>
+        <div class="portfolio-grid">
+            <!-- Swagger API Documentation Sample -->
+            <div class="portfolio-item">
+                <h3>Interactive API Documentation (Swagger UI)</h3>
+                <p>Embedded Swagger UI demonstrating API reference documentation for the EdgeXFoundry IoT Platform.</p>
+                <a href="samples/openapi3_0.yaml" class="btn">Download YAML</a>
+            </div>
+            
+            <!-- Additional API Documentation Sample -->
+            <div class="portfolio-item">
+                <img src="images/manual-book.png" alt="API Documentation for AI Platform">
+                <h3>API Documentation for AI Platform</h3>
+                <p>Comprehensive API documentation for managing models programmatically on the Unified AI Platform.</p>
+                <a href="samples/sample2.pdf" class="btn">View Sample</a>
+            </div>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Kamal Raj | Technical Writer Portfolio</p>
     </footer>
+
+    <!-- Include Swagger UI JS and initialize Swagger UI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-standalone-preset.js"></script>
+    <script>
+        window.onload = function() {
+            // Initialize Swagger UI
+            const ui = SwaggerUIBundle({
+                url: 'samples/openapi3_0.yaml', // Path to your YAML file
+                dom_id: '#swagger-ui',
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIStandalonePreset
+                ],
+                layout: "BaseLayout"
+            });
+            window.ui = ui;
+        };
+    </script>
 </body>
 </html>
