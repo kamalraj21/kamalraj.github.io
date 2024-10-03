@@ -1,0 +1,121 @@
+openapi: 3.0.0
+info:
+  title: EdgeXFoundry API
+  version: '1.0'
+  description: API Reference for EdgeXFoundry IoT Platform
+
+servers:
+  - url: https://api.edgexfoundry.com
+
+paths:
+  /api/v1/devices:
+    get:
+      summary: List All Devices
+      description: Retrieves a list of all registered IoT devices.
+      parameters:
+        - in: header
+          name: x-api-key
+          schema:
+            type: string
+          required: true
+          description: Your API key
+      responses:
+        '200':
+          description: A JSON array of devices
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  devices:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        name:
+                          type: string
+                        status:
+                          type: string
+                        last_updated:
+                          type: string
+                          format: date-time
+
+  /api/v1/devices/{device_id}:
+    get:
+      summary: Get Device Details
+      description: Fetches detailed information about a specific device.
+      parameters:
+        - in: header
+          name: x-api-key
+          schema:
+            type: string
+          required: true
+          description: Your API key
+        - in: path
+          name: device_id
+          schema:
+            type: string
+          required: true
+          description: The unique ID of the device
+      responses:
+        '200':
+          description: A JSON object of device details
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  type:
+                    type: string
+                  status:
+                    type: string
+                  metadata:
+                    type: object
+                    properties:
+                      location:
+                        type: string
+                      last_reading:
+                        type: string
+                        format: date-time
+    put:
+      summary: Update Device Status
+      description: Updates the status of a specific device.
+      parameters:
+        - in: header
+          name: x-api-key
+          schema:
+            type: string
+          required: true
+          description: Your API key
+        - in: path
+          name: device_id
+          schema:
+            type: string
+          required: true
+          description: The unique ID of the device
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+      responses:
+        '200':
+          description: Status update confirmation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
