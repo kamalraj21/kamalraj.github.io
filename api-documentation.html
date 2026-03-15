@@ -11,12 +11,12 @@
 <body>
     <header>
         <h1>API Documentation</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="technical-writing.html">Technical Writing</a> |
-            <a href="content-strategy.html">Content Strategy</a> |
-            <a href="information-architecture.html">Information Architecture</a> |
-            <a href="docs-as-code.html">Docs-as-Code Practices</a>
+                <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">Profile</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
         </nav>
     </header>
 
@@ -27,25 +27,25 @@
     <!-- Overview Section -->
     <section class="section">
         <h2>Overview</h2>
-        <p>API documentation plays a critical role in modern software development, serving as a bridge between developers and the functionality provided by APIs. My approach to API documentation focuses on creating clear, detailed, and user-friendly guides that facilitate seamless integration and implementation of APIs. By providing comprehensive endpoint descriptions, request and response examples, error handling, and authentication details, I ensure that developers have the information they need to use APIs efficiently and effectively.</p>
+        <p>API documentation bridges the gap between developers and API functionality. My approach focuses on creating clear, detailed, and user-friendly guides that facilitate seamless API integration. By providing comprehensive endpoint descriptions, request and response examples, error handling guidance, and authentication details, I ensure developers have the information they need to use APIs efficiently.</p>
     </section>
 
     <!-- Value Proposition Section -->
     <section class="section">
         <h2>Value Proposition</h2>
-        <p>I specialize in creating comprehensive API documentation that simplifies complex processes and enables developers to integrate and utilize APIs effectively. My documentation approach emphasizes clarity, consistency, and accuracy to enhance developer experience and reduce support tickets.</p>
+        <p>I specialize in creating comprehensive API documentation that simplifies complex processes and enables developers to integrate APIs effectively. My approach emphasizes clarity, consistency, and accuracy to enhance the developer experience and reduce support tickets.</p>
         <ul>
-            <li><strong>Comprehensive Endpoint Descriptions:</strong> Documented endpoints with detailed information on parameters, request bodies, response codes, and potential errors to guide developers through the integration process.</li>
-            <li><strong>Example Requests and Responses:</strong> Provided real-world examples using tools like Swagger and Postman to help developers understand the practical usage of each API endpoint.</li>
-            <li><strong>Authentication and Security:</strong> Included instructions for implementing secure API authentication, such as OAuth, API keys, or JWT, ensuring secure interactions between applications.</li>
-            <li><strong>Error Handling and Troubleshooting:</strong> Documented common error responses and troubleshooting steps, helping developers quickly identify and resolve issues during API implementation.</li>
+            <li><strong>Comprehensive endpoint descriptions:</strong> Detail parameters, request bodies, response codes, and errors to guide developers through integration.</li>
+            <li><strong>Example requests and responses:</strong> Provide real-world examples using tools like Swagger and Postman to demonstrate practical usage.</li>
+            <li><strong>Authentication and security:</strong> Include instructions for implementing secure API authentication (such as OAuth, API keys, or JWT) to ensure secure interactions.</li>
+            <li><strong>Error handling and troubleshooting:</strong> Document common error responses and troubleshooting steps to help developers quickly resolve issues.</li>
         </ul>
     </section>
 
     <!-- Interactive API Documentation Section -->
     <section class="section">
         <h2>Interactive API Documentation (Swagger UI)</h2>
-        <p>This embedded Swagger UI demonstrates a sample API reference for the EdgeXFoundry IoT Platform, showcasing a comprehensive set of endpoints, methods, parameters, and response structures. The interactive nature of this documentation allows developers to explore and test the API directly within their browsers.</p>
+        <p>This embedded Swagger UI provides a sample API reference for the EdgeX foundational IoT platform. It showcases a comprehensive set of endpoints, methods, parameters, and response structures. The interactive documentation allows developers to explore and test the API directly in the browser.</p>
         <div id="swagger-ui" class="swagger-container"></div>
     </section>
 
@@ -66,7 +66,7 @@
                 <img src="images/manual-book.png" alt="API Documentation for AI Platform">
                 <h3>API Documentation for AI Platform</h3>
                 <p>Comprehensive API documentation for managing models programmatically on the Unified AI Platform.</p>
-                <a href="samples/sample2.pdf" class="btn">View Sample</a>
+                <a href="sample2-shopping.html" class="btn">View Sample</a>
             </div>
         </div>
     </section>
@@ -93,5 +93,6 @@
             window.ui = ui;
         };
     </script>
+    <script src="script.js"></script>
 </body>
 </html>

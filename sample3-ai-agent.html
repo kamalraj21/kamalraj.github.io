@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuring Agentforce for Public Sector - Writing Sample</title>
+    <link rel="stylesheet" href="styles.css?v=1.1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .doc-content {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: left;
+            line-height: 1.6;
+        }
+        .doc-content h1, .doc-content h2, .doc-content h3 {
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .doc-content p {
+            margin-bottom: 1rem;
+        }
+        .doc-content ul, .doc-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+        .doc-content li {
+            margin-bottom: 0.5rem;
+        }
+        .note {
+            background-color: rgba(52, 152, 219, 0.1);
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 1.5rem;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #2980b9;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Configuring Agentforce for Public Sector</h1>
+                <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">Profile</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+
+    <section class="section">
+        <div class="doc-content">
+            <h1>Configuring an AI Agent for Citizen Services using Salesforce Agentforce</h1>
+            <p><strong>Product:</strong> Salesforce Public Sector Solutions<br>
+            <strong>Feature:</strong> Agentforce<br>
+            <strong>Version:</strong> Spring '24 Release</p>
+            
+            <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--border-color);">
+
+            <h2>Overview</h2>
+            <p>Salesforce Agentforce enables government agencies and public sector organizations to build autonomous AI agents that handle routine citizen inquiries, automate service requests, and triage complex issues. By configuring an AI Agent, you can provide 24/7 constituent support while reducing case volume for human representatives.</p>
+
+            <p>This guide explains how to configure a new AI Agent to assist citizens with municipal service requests (such as reporting a pothole or requesting a permit) using the Agent Builder.</p>
+
+            <h2>Prerequisites</h2>
+            <p>Before you begin, ensure you have the following:</p>
+            <ul>
+                <li><strong>System Administrator</strong> permissions in your Salesforce Public Sector org.</li>
+                <li>The <strong>Agentforce Service</strong> feature license enabled.</li>
+                <li>Preconfigured Data Cloud ingestion streams mapped to your public service knowledge base.</li>
+            </ul>
+
+            <h2>Creating the Citizen Services AI Agent</h2>
+            <p>Use the Agent Builder to define the AI Agent's role, connect it to your knowledge base, and specify its conversation tones and boundaries.</p>
+
+            <p>To create a new AI Agent:</p>
+            <ol>
+                <li>From Setup, in the Quick Find box, enter <strong>Agentforce</strong>, and then select <strong>Agent Builder</strong>.</li>
+                <li>Click <strong>New Agent</strong>.</li>
+                <li>In the <strong>Provide a Name</strong> field, enter <code>Citizen Services Assistant</code>.</li>
+                <li>In the <strong>Description</strong> field, enter <code>An AI Agent designed to help constituents navigate public service requests and knowledge articles.</code></li>
+                <li>Click <strong>Next</strong>.</li>
+            </ol>
+
+            <h3>Configuring the Agent Profile and Tone</h3>
+            <p>The agent profile dictates how the AI formulates responses. Because this agent represents a government entity, its tone must be professional, helpful, and objective.</p>
+
+            <p>To configure the agent's tone and instructions:</p>
+            <ol>
+                <li>In the Agent Builder workspace, click the <strong>Profile</strong> tab.</li>
+                <li>Under System Prompt, provide explicit instructions for the language model. For example, enter:<br>
+                <em>"You are a helpful, professional representative of the municipal government. Answer constituent questions using only the provided knowledge base. Do not speculate or make promises on behalf of the agency. If you cannot find the answer, politely offer to escalate the inquiry to a human agent."</em></li>
+                <li>In the <strong>Tone</strong> dropdown list, select <strong>Professional and Empathetic</strong>.</li>
+                <li>Click <strong>Save</strong>.</li>
+            </ol>
+
+            <h3>Assigning Knowledge Actions</h3>
+            <p>To ensure the AI Agent provides accurate answers, you must bind it to your Data Cloud knowledge repository.</p>
+
+            <div class="note">
+                <div class="note-title">Important</div>
+                <p>Knowledge Actions override the underlying large language model's (LLM) training data. The agent will only draw conclusions from the Data Cloud objects you specify here.</p>
+            </div>
+
+            <p>To assign knowledge actions to the agent:</p>
+            <ol>
+                <li>Click the <strong>Actions</strong> tab.</li>
+                <li>Click <strong>Add Action</strong>, and then select <strong>Knowledge Retrieval</strong>.</li>
+                <li>In the <strong>Select Data Space</strong> field, choose <strong>Public_Sector_Knowledge</strong>.</li>
+                <li>In the <strong>Data Model Objects (DMOs)</strong> list, select <strong>Public Service Articles</strong> and <strong>Permit Guidelines</strong>.</li>
+                <li>Click <strong>Done</strong>.</li>
+            </ol>
+
+            <h3>Defining Escalation Rules</h3>
+            <p>When the AI Agent encounters a scenario it cannot resolve, it must smoothly transition the conversation to a human constituent service representative.</p>
+
+            <p>To configure the escalation protocol:</p>
+            <ol>
+                <li>Click the <strong>Settings</strong> tab.</li>
+                <li>Under the Handoff section, toggle <strong>Enable Human Escalation</strong> to the active position.</li>
+                <li>In the <strong>Omni-Channel Queue</strong> dropdown list, select <strong>Tier 1 Support (Public Services)</strong>.</li>
+                <li>In the <strong>Escalation Message</strong> field, enter <code>Transferring you to a representative who can assist with this specific request. Please hold.</code></li>
+                <li>Click <strong>Save &amp; Publish</strong>.</li>
+            </ol>
+
+            <h2>Verifying the Configuration</h2>
+            <p>Before deploying the agent to a public-facing Experience Cloud site, test its responses internally using the Agentforce Sandbox.</p>
+            
+            <p>To test the AI Agent:</p>
+            <ol>
+                <li>From the top-right corner of the Agent Builder, click <strong>Preview</strong>.</li>
+                <li>In the chat window, type: <code>How do I report a pothole on Main Street?</code></li>
+                <li>Verify that the AI returns the correct procedure mapped from the <em>Public Service Articles</em> DMO.</li>
+                <li>Type an off-topic query (e.g., <code>Can you calculate my income tax?</code>).</li>
+                <li>Verify that the AI apologizes and triggers the escalation message to the Omni-Channel queue.</li>
+            </ol>
+            <p>Once verification is successful, your AI Agent is ready for deployment in production.</p>
+
+        </div>
+    </section>
+
+    <a href="portfolio.html" class="btn-back-sticky"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+
+    <footer>
+        <p>&copy; 2024 Kamal Raj | Technical Writer Portfolio</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -4,45 +4,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Kamal Raj</title>
-    <link rel="stylesheet" href="styles.css?v=1.1">
+    <link rel="stylesheet" href="styles.css?v=1.2">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .cv-section {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+            line-height: 1.6;
+        }
+        .cv-header {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 1rem;
+        }
+        .cv-header h2 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        .cv-experience-item {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .cv-experience-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .cv-experience-item h3 {
+            margin-bottom: 0.2rem;
+            color: var(--text-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cv-experience-item .role-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .cv-experience-item .duration {
+            font-size: 0.95rem;
+            color: #666;
+            font-weight: normal;
+        }
+        .cv-experience-item h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        .cv-experience-item ul {
+            padding-left: 1.5rem;
+        }
+        .cv-experience-item li {
+            margin-bottom: 0.5rem;
+        }
+        .skills-grid-cv {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .skill-category h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.3rem;
+        }
+        .skill-category ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .skill-category li {
+            margin-bottom: 0.3rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .skill-category li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>About Kamal Raj</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="portfolio.html">Portfolio</a> |
+                <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">Profile</a>
+            <a href="portfolio.html">Portfolio</a>
             <a href="contact.html">Contact</a>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
         </nav>
     </header>
+
     <section id="about" class="section">
-        <h2>Professional Profile</h2>
-        <p>
-            I am an experienced Technical Writer and Content Strategist with over 13 years in the industry. My work focuses on creating clear, user-centric documentation across various software domains, including AI, IoT, edge computing, and enterprise solutions. I collaborate with UX architects, engineers, and stakeholders to design and deliver comprehensive documentation frameworks that drive product usability and adoption.
-        </p>
-        
-        <h2>Key Achievements</h2>
-        <ul>
-            <li>Led documentation initiatives that simplified developer onboarding, reducing ramp-up time by 25%.</li>
-            <li>Integrated Generative AI tools into content workflows, cutting production time by 30% while enhancing content accuracy.</li>
-            <li>Implemented persona-based documentation frameworks, reducing support tickets by 15% and improving user satisfaction.</li>
-            <li>Redesigned documentation websites, resulting in a 35% increase in user satisfaction scores.</li>
-            <li>Successfully transitioned multiple organizations to agile documentation processes, enhancing cross-functional collaboration.</li>
-        </ul>
-        
-        <h2>Core Competencies</h2>
-        <ul>
-            <li>Technical Writing & Documentation</li>
-            <li>Content Strategy & Operations</li>
-            <li>API Documentation & SDK Integration</li>
-            <li>Generative AI Applications</li>
-            <li>UX Writing, Accessibility & Inclusion</li>
-            <li>Information Architecture</li>
-            <li>Project Management & Team Leadership</li>
-        </ul>
+        <div class="cv-section">
+            <div class="cv-header">
+                <h2>Professional Profile</h2>
+                <p>
+                    I am a highly accomplished <strong>Staff Technical Writer and Content Designer</strong> with over <strong>17 years of dense experience</strong> transforming complex technical concepts into human-friendly, user-centric documentation. Currently operating at Salesforce, I lead comprehensive documentation strategies across multiple clouds, leveraging a docs-as-code approach (CI/CD) and sophisticated Generative AI integrations to scale content delivery and drive product adoption.
+                </p>
+                <p>
+                    My expertise spans AI and GenAI toolchains, API documentation, UX writing, and information architecture. I possess a proven track record of orchestrating major product releases, training writing teams, and authoring PoCs that automate content updates via agentic workflows. By merging technical depth with a refined content design philosophy, I ensure documentation acts as a core pillar of the product experience.
+                </p>
+            </div>
+
+            <div class="cv-header">
+                <h2>Core Competencies & Tools</h2>
+                <div class="skills-grid-cv">
+                    <div class="skill-category">
+                        <h4>Content Design & Strategy</h4>
+                        <ul>
+                            <li>Technical Writing & Editing</li>
+                            <li>UX Writing & Interface Microcopy</li>
+                            <li>Information Architecture</li>
+                            <li>Persona-Based Learning Path Design</li>
+                            <li>Agile Documentation Strategies</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>AI & GenAI Innovations</h4>
+                        <ul>
+                            <li>Prompt Engineering & Agentic Workflows</li>
+                            <li>Custom AI PoC Development (Python)</li>
+                            <li>Authored Skills for Claude Code</li>
+                            <li>GenAI Tools (Cursor, Claude, Gemini, Writer.ai)</li>
+                            <li>AI-driven Change Management</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Technical Tools & Workflows</h4>
+                        <ul>
+                            <li>Docs-as-Code (CI/CD Pipelines)</li>
+                            <li>OxygenXML (DITA framework)</li>
+                            <li>Version Control (Perforce, Git)</li>
+                            <li>API Documentation (Swagger/OpenAPI)</li>
+                            <li>Salesforce Multi-Cloud Architecture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-header">
+                <h2>Professional Experience</h2>
+                
+                <div class="cv-experience-item">
+                    <h3>
+                        <span class="role-title">Staff Technical Writer</span>
+                        <span class="duration">Current</span>
+                    </h3>
+                    <h4>Salesforce | Bangalore, India</h4>
+                    <ul>
+                        <li><strong>Release & Content Management:</strong> Lead end-to-end documentation releases spanning Communications, Financial Services, Public Sector Solutions, and Missionforce clouds. Handle comprehensive UI text reviews, data model/flow reviews, release notes, feature documentation, and Trailhead modules.</li>
+                        <li><strong>GenAI Integration & Operations:</strong> Developed scalable content delivery pipelines utilizing advanced Generative AI tools (Cursor, Claude Code, Gemini, Writer.ai). Authored specific "Skills for Claude Code" customized for technical writing tasks and content experience workflows.</li>
+                        <li><strong>AI Advocacy & PoCs:</strong> Contributed to AI innovations showcased at the Salesforce AI Expo. Developed functional Python PoCs to streamline processes via AI-enabled workflows (both autonomous and human-in-the-loop), enabling automated updates at scale.</li>
+                        <li><strong>Leadership & Mentorship:</strong> Direct entire release cycles, managing the onboarding, training, and strategic alignment of junior and mid-level technical writers. Manage complex environments utilizing OxygenXML DITA, Perforce, and active docs-as-code CI/CD principles.</li>
+                    </ul>
+                </div>
+
+                <div class="cv-experience-item">
+                    <h3>
+                        <span class="role-title">Developer Experience Technical Writer</span>
+                        <span class="duration">Aug 2021 – Recent</span>
+                    </h3>
+                    <h4>Intel Corporation | Bengaluru, India</h4>
+                    <ul>
+                        <li>Led documentation for IoT, edge computing, and AI platforms, reducing developer onboarding time by 25%.</li>
+                        <li>Authored technical documentation, including how-to guides, API reference documentation, and project communications for cloud and internal sites.</li>
+                        <li>Implemented information architectures to guide users through key journeys in cloud technologies and edge computing.</li>
+                    </ul>
+                </div>
+
+                <div class="cv-experience-item">
+                    <h3>
+                        <span class="role-title">Senior Technical Writer</span>
+                        <span class="duration">Feb 2021 – Jul 2021</span>
+                    </h3>
+                    <h4>Rakuten | Bengaluru, India</h4>
+                    <ul>
+                        <li>Wrote comprehensive documentation for Big Data and AI platforms, including feature guides, how-to guides, and reference materials.</li>
+                        <li>Contributed to design thinking and feature development discussions to incorporate developer feedback and enhance content strategy.</li>
+                    </ul>
+                </div>
+
+                <div class="cv-experience-item">
+                    <h3>
+                        <span class="role-title">Senior Technical Writer</span>
+                        <span class="duration">Oct 2018 – Jan 2021</span>
+                    </h3>
+                    <h4>Netcracker Technology | Bengaluru, India</h4>
+                    <ul>
+                        <li>Managed complex documentation projects to meet deadlines in a fast-paced environment.</li>
+                        <li>Rewrote and reorganized existing documentation to align with evolving customer needs and Google style guidelines.</li>
+                    </ul>
+                </div>
+
+                <div class="cv-experience-item">
+                    <h3>
+                        <span class="role-title">Senior Technical Writer</span>
+                        <span class="duration">Earlier Career Highlights</span>
+                    </h3>
+                    <h4>AgilePoint, Evolving Systems, Novell, Oracle & Unisys</h4>
+                    <ul>
+                        <li><strong>AgilePoint:</strong> Created DITA-based online help, improving content reusability by 40%.</li>
+                        <li><strong>Evolving Systems:</strong> Developed user guides, tutorials, and infographics, reducing training time for new customers.</li>
+                        <li><strong>Novell Software Development:</strong> Authored admin guides and tutorials, improving feature adoption by 25%.</li>
+                        <li><strong>Oracle India:</strong> Created ERP and CRM guides, receiving a 95% satisfaction rate from the implementation team.</li>
+                        <li><strong>Unisys India:</strong> Rebranded over 1000 pages of legacy documentation, improving readability scores by 40%.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
     </section>
+
     <footer>
         <p>&copy; 2024 Kamal Raj | Technical Writer Portfolio</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

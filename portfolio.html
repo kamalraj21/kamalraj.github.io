@@ -9,86 +9,102 @@
 <body>
     <header>
         <h1>My Portfolio</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">Profile</a> |
-            <a href="portfolio.html">Portfolio</a> |
+                <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">Profile</a>
+            <a href="portfolio.html">Portfolio</a>
             <a href="contact.html">Contact</a>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
         </nav>
     </header>
 
     <section id="portfolio" class="section">
         <h2>Writing Samples</h2>
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="user-guide">User Guides</button>
+            <button class="filter-btn" data-filter="api">API Docs</button>
+            <button class="filter-btn" data-filter="ux">UX & Microcopy</button>
+            <button class="filter-btn" data-filter="case-study">Case Studies</button>
+        </div>
         <div class="portfolio-grid">
             <!-- Sample 1 -->
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="user-guide">
                 <img src="images/user-guide.png" alt="Unified AI Platform User Guide">
                 <h3>Unified AI Platform User Guide</h3>
-                <p>A detailed, step-by-step guide for setting up and managing ML models, tailored to developers and system administrators.</p>
-                <a href="samples/sample1.pdf" class="btn">View Sample</a>
+                <p>A step-by-step guide for setting up and managing ML models, tailored to developers and system administrators.</p>
+                <a href="sample1-imanager.html" class="btn">View Sample</a>
             </div>
             
             <!-- Sample 2 -->
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="api">
                 <img src="images/manual-book.png" alt="Unified AI Platform API Guide">
                 <h3>Unified AI Platform API Guide</h3>
-                <p>Comprehensive API documentation for programmatically managing AI models, complete with code examples and troubleshooting tips.</p>
-                <a href="samples/sample2.pdf" class="btn">View Sample</a>
+                <p>API documentation for programmatically managing AI models, complete with code examples and troubleshooting information.</p>
+                <a href="sample2-shopping.html" class="btn">View Sample</a>
             </div>
 
             <!-- Sample 3 -->
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="user-guide">
                 <img src="images/persona.png" alt="Persona-Based User Guide">
                 <h3>Persona-Based User Guide</h3>
                 <p>User-centric documentation designed for different personas, including developers, system administrators, and business users.</p>
-                <a href="samples/sample3.pdf" class="btn">View Sample</a>
+                <a href="sample3-ai-agent.html" class="btn">View Sample</a>
             </div>
 
             <!-- Sample 4 -->
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="user-guide">
                 <img src="images/installation-guide.png" alt="iManager Installation Guide">
                 <h3>iManager Installation Guide</h3>
-                <p>A comprehensive guide for installing and configuring iManager on various platforms.</p>
-                <a href="samples/Writing sample1_iManager_Installation Guide.pdf" class="btn">View Sample</a>
+                <p>A guide for installing and configuring iManager on various platforms.</p>
+                <a href="sample1-imanager.html" class="btn">View Sample</a>
             </div>
 
             <!-- Sample 5 -->
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="user-guide">
                 <img src="images/shopping-portal.png" alt="Shopping Portal User Guide">
                 <h3>Shopping Portal User Guide</h3>
-                <p>A detailed user guide that covers how to create an account, update profile information, view products, and complete an order on the shopping portal.</p>
-                <a href="samples/Writing sample2_Shopping_portal_User_Guide.pdf" class="btn">View Sample</a>
+                <p>A user guide detailing how to create an account, update profile information, view products, and complete an order on the shopping portal.</p>
+                <a href="sample2-shopping.html" class="btn">View Sample</a>
+            </div>
+
+            <!-- Agentforce Sample -->
+            <div class="portfolio-item" data-category="user-guide">
+                <img src="images/user-guide.png" alt="Configuring Agentforce">
+                <h3>Configuring Agentforce</h3>
+                <p>A technical guide detailing how to set up an AI Agent for citizen public services using Salesforce Agentforce.</p>
+                <a href="sample3-ai-agent.html" class="btn">View Sample</a>
             </div>
 
             <!-- Microcopy Sample -->
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="ux">
                 <img src="images/online-help.png" alt="Microcopy Example">
                 <h3>Microcopy Example</h3>
                 <p>Interface microcopy samples that enhance user interactions within applications.</p>
-                <a href="samples/microcopy-example.pdf" class="btn">View Sample</a>
+                <a href="microcopy-example.html" class="btn">View Sample</a>
             </div>
 
             <!-- In-App Help Sample -->
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="ux">
                 <img src="images/in-app-help.png" alt="In-App Help Sample">
                 <h3>In-App Help Sample</h3>
-                <p>Examples of contextual in-app help content that improves user experience.</p>
-                <a href="samples/in-app-help-sample-examples.pdf" class="btn">View Sample</a>
+                <p>Examples of contextual in-app help content that improves the user experience.</p>
+                <a href="in-app-help.html" class="btn">View Sample</a>
             </div>
 
             <!-- API YAML Sample -->
-            <div class="portfolio-item">
-                <img src="images/api.png" alt="API Documentation Sample (YAML)">
-                <h3>API Documentation (Swagger)</h3>
-                <p>Interactive API documentation using Swagger UI to demonstrate endpoint usage and testing capabilities.</p>
-                <a href="samples/openapi3_0.yaml" class="btn">Download YAML</a>
+            <div class="portfolio-item" data-category="api">
+                <img src="images/api.png" alt="API Documentation Sample (Live)">
+                <h3>API Documentation (Live)</h3>
+                <p>Interactive API documentation rendered directly using Swagger UI to demonstrate endpoint usage and testing capabilities.</p>
+                <a href="api-demo.html" class="btn">View Live API</a>
             </div>
 
             <!-- CV Download -->
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="all">
                 <img src="images/cv.png" alt="CV Thumbnail">
                 <h3>My CV</h3>
-                <p>Download my latest CV in PDF format to explore my full professional background.</p>
+                <p>Download my CV in PDF format to explore my professional background.</p>
                 <a href="samples/Kamal-Raj-CV-Technical-Writer.pdf" class="btn">Download CV</a>
             </div>
         </div>
@@ -99,25 +115,37 @@
             <div class="portfolio-item">
                 <img src="images/content-strategy.png" alt="Content Strategy Case Study">
                 <h3>Content Strategy & Operations</h3>
-                <p>Showcasing a comprehensive approach to content strategy and operational efficiency in documentation workflows.</p>
+                <div style="font-size: 0.9em; margin-bottom: 10px;">
+                    <strong>Before:</strong> Disconnected workflows and low content reuse.<br>
+                    <strong>After:</strong> Unified docs-as-code pipeline increasing production speed by 30%.
+                </div>
                 <a href="samples/case-study-content-ops.pdf" class="btn">View Case Study</a>
             </div>
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="case-study">
                 <img src="images/docs-code.png" alt="Docs-as-Code Case Study">
                 <h3>Docs-as-Code Implementation</h3>
-                <p>Illustrating the integration of docs-as-code practices to streamline documentation development and delivery.</p>
+                <div style="font-size: 0.9em; margin-bottom: 10px;">
+                    <strong>Before:</strong> Legacy monolithic authoring tools.<br>
+                    <strong>After:</strong> Git-backed CI/CD integration with automated review pipelines.
+                </div>
                 <a href="samples/case-study-docs-as-code.pdf" class="btn">View Case Study</a>
             </div>
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="case-study">
                 <img src="images/ia.png" alt="Information Architecture Case Study">
                 <h3>Information Architecture</h3>
-                <p>Exploring strategies for designing structured content layouts to enhance usability and accessibility.</p>
+                <div style="font-size: 0.9em; margin-bottom: 10px;">
+                    <strong>Before:</strong> Outdated content with unknown last-update dates.<br>
+                    <strong>After:</strong> Real-time updates with task-based navigation.
+                </div>
                 <a href="samples/case-study-ia.pdf" class="btn">View Case Study</a>
             </div>
-            <div class="portfolio-item">
+            <div class="portfolio-item" data-category="case-study">
                 <img src="images/user-experience.png" alt="DX Writing Case Study">
                 <h3>Developer Experience (DX) Writing</h3>
-                <p>Highlighting the development of user-centric documentation for developers to ensure seamless integration and adoption.</p>
+                <div style="font-size: 0.9em; margin-bottom: 10px;">
+                    <strong>Before:</strong> Exposed complex configurations with error-prone manual input.<br>
+                    <strong>After:</strong> Guided experience with recommended settings and progressive disclosure.
+                </div>
                 <a href="samples/case-study-dx-writing.pdf" class="btn">View Case Study</a>
             </div>
         </div>
@@ -126,5 +154,6 @@
     <footer>
         <p>&copy; 2024 Kamal Raj | Technical Writer Portfolio</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

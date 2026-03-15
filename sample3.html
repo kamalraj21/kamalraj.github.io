@@ -9,34 +9,41 @@
 <body>
     <header>
         <h1>Persona-Based User Guide</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="portfolio.html">Portfolio</a> |
-            <a href="#download">Download</a>
+                <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">Profile</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
         </nav>
     </header>
 
     <section id="description" class="section">
         <h2>Overview</h2>
-        <p>This persona-based guide is tailored to the specific needs of system administrators, developers, and business users. It offers targeted instructions and workflows, ensuring each user persona can effectively use the Unified AI Platform to achieve their goals.</p>
+        <p>This persona-based guide addresses the specific needs of system administrators, developers, and business users. It provides targeted instructions and workflows that enable each user persona to effectively use the Unified AI Platform and achieve their goals.</p>
     </section>
 
     <section id="highlights" class="section">
         <h2>Highlights</h2>
         <ul>
             <li>Persona-driven structure that addresses the unique needs of different user roles.</li>
-            <li>Clear instructions for common tasks such as deployment, monitoring, and reporting.</li>
-            <li>Includes best practices to enhance user experience and platform efficiency.</li>
+            <li>Clear instructions for common tasks, such as deployment, monitoring, and reporting.</li>
+            <li>Best practices to enhance the user experience and platform efficiency.</li>
         </ul>
     </section>
 
-    <section id="download" class="section">
-        <h2>Download the Full Sample</h2>
-        <a href="samples/sample3.pdf" class="btn">Download PDF</a>
+    <section id="view-sample" class="section" style="max-width: 1000px; padding: 0; overflow: hidden;">
+        <h2 style="padding: 20px; border-bottom: none; margin-bottom: 0;">View Sample Online</h2>
+        <embed src="samples/sample3.pdf" type="application/pdf" width="100%" height="700px" style="border: none;" />
+        <div style="padding: 20px; text-align: center; border-top: 1px solid var(--border-color);">
+            <p style="margin-bottom: 15px;">Having trouble viewing?</p>
+            <a href="samples/sample3.pdf" download class="btn" style="width: auto;">Download PDF</a>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Kamal Raj | Technical Writer Portfolio</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

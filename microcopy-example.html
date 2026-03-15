@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Microcopy Examples - Kamal Raj</title>
+    <link rel="stylesheet" href="styles.css?v=1.2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .sample-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            line-height: 1.7;
+        }
+        
+        .sample-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        .sample-content .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .sample-content h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .sample-content h3 {
+            color: var(--text-color);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .microcopy-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .microcopy-split .box {
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .microcopy-split .original {
+            background-color: rgba(231, 76, 60, 0.05);
+            border-top: 4px solid #e74c3c;
+        }
+
+        .microcopy-split .revised {
+            background-color: rgba(46, 204, 113, 0.05);
+            border-top: 4px solid #2ecc71;
+        }
+
+        .microcopy-split h4 {
+            margin-top: 0;
+            margin-bottom: 0.8rem;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .explanation {
+            background-color: rgba(108, 92, 231, 0.05);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem 1.5rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .microcopy-split {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Writing Sample</h1>
+                <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">Profile</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+
+    <section class="section">
+        <div class="sample-content">
+            <h1>Interface Microcopy Examples</h1>
+            <p class="subtitle">Showcasing the impact of clear, concise, and human-friendly UI text.</p>
+
+            <h2>Introduction</h2>
+            <p>Microcopy plays a crucial role in guiding users through an application. The following examples highlight best practices in writing concise, user-friendly, and context-specific microcopy for various interface elements.</p>
+
+            <h2>Onboarding Screens</h2>
+            
+            <h3>Welcome Message</h3>
+            <div class="microcopy-split">
+                <div class="box original">
+                    <h4>Original</h4>
+                    <p>"Welcome to our platform! Let's get started by setting up your profile."</p>
+                </div>
+                <div class="box revised">
+                    <h4>Revised</h4>
+                    <p>"Welcome! Ready to set up your profile?"</p>
+                </div>
+            </div>
+            <div class="explanation">
+                <strong>Why it works:</strong> Simplified the message, reduced word count, and added a friendly tone.
+            </div>
+
+            <h3>Action Button</h3>
+            <div class="microcopy-split">
+                <div class="box original">
+                    <h4>Original</h4>
+                    <p>"Click here to continue"</p>
+                </div>
+                <div class="box revised">
+                    <h4>Revised</h4>
+                    <p>"Continue"</p>
+                </div>
+            </div>
+            <div class="explanation">
+                <strong>Why it works:</strong> Clear and action-oriented language for more effective guidance.
+            </div>
+
+            <h2>Error Messages</h2>
+            
+            <h3>Form Submission Error</h3>
+            <div class="microcopy-split">
+                <div class="box original">
+                    <h4>Original</h4>
+                    <p>"The input you provided is incorrect. Please try again."</p>
+                </div>
+                <div class="box revised">
+                    <h4>Revised</h4>
+                    <p>"Oops! Something’s not right. Please check and try again."</p>
+                </div>
+            </div>
+            <div class="explanation">
+                <strong>Why it works:</strong> Using a more conversational tone helps to reduce user frustration and encourages them to reattempt.
+            </div>
+
+            <h3>Password Requirements</h3>
+            <div class="microcopy-split">
+                <div class="box original">
+                    <h4>Original</h4>
+                    <p>"Password does not meet the requirements."</p>
+                </div>
+                <div class="box revised">
+                    <h4>Revised</h4>
+                    <p>"Password must be at least 8 characters with one number."</p>
+                </div>
+            </div>
+            <div class="explanation">
+                <strong>Why it works:</strong> Provides specific guidance to help users understand the requirements directly at the point of failure.
+            </div>
+
+            <h2>Tooltips</h2>
+            
+            <h3>Password Field</h3>
+            <div class="microcopy-split">
+                <div class="box original">
+                    <h4>Original</h4>
+                    <p>"Enter your password."</p>
+                </div>
+                <div class="box revised">
+                    <h4>Revised</h4>
+                    <p>"Choose a strong password—at least 8 characters."</p>
+                </div>
+            </div>
+            <div class="explanation">
+                <strong>Why it works:</strong> Offers actionable advice to support a positive user experience rather than stating the obvious.
+            </div>
+
+            <h2>Confirmation Messages</h2>
+            
+            <h3>Account Creation</h3>
+            <div class="microcopy-split">
+                <div class="box original">
+                    <h4>Original</h4>
+                    <p>"Your account has been successfully created."</p>
+                </div>
+                <div class="box revised">
+                    <h4>Revised</h4>
+                    <p>"Success! Your account is ready."</p>
+                </div>
+            </div>
+            <div class="explanation">
+                <strong>Why it works:</strong> Adds a positive tone and confirms success succinctly.
+            </div>
+
+            <h2>Conclusion</h2>
+            <p>Effective microcopy improves user interaction by providing clarity, guidance, and a touch of personality to the interface.</p>
+
+        </div>
+    </section>
+
+    <a href="portfolio.html" class="btn-back-sticky"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+
+    <footer>
+        <p>&copy; 2024 Kamal Raj | Technical Writer Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

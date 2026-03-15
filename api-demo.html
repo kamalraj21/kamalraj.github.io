@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live API Demo - Kamal Raj</title>
+    <link rel="stylesheet" href="styles.css?v=2.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5.9.0/swagger-ui.css">
+    <style>
+        .swagger-ui .topbar { display: none; }
+        .swagger-section {
+            background: white; /* swagger is optimized for light backgrounds */
+            border-radius: 12px;
+            margin: 40px auto;
+            max-width: 1200px;
+            padding: 20px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Interactive API Documentation</h1>
+        <p>Docs-as-Code execution rendering openapi3_0.yaml live.</p>
+                <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">Profile</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+
+    <!-- Context Section -->
+    <section class="section" style="max-width: 1200px; margin-bottom: 0; box-shadow: none; border: none; background: transparent;">
+        <p class="context-line" style="text-align: center; margin-bottom: 0;">This page fetches the YAML specification directly from the repository and renders it through the Swagger UI library via CDN, offering an interactive playground for developers.</p>
+    </section>
+
+    <!-- Canvas for Swagger UI -->
+    <div class="swagger-section">
+        <div id="swagger-ui"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Kamal Raj | Technical Writer Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/swagger-ui-dist@5.9.0/swagger-ui-bundle.js"></script>
+    <script>
+        window.onload = function() {
+            window.ui = SwaggerUIBundle({
+                url: "samples/openapi3_0.yaml",
+                dom_id: '#swagger-ui',
+                deepLinking: true,
+                presets: [
+                    SwaggerUIBundle.presets.apis,
+                    SwaggerUIBundle.SwaggerUIStandalonePreset
+                ],
+                plugins: [
+                    SwaggerUIBundle.plugins.DownloadUrl
+                ],
+                layout: "BaseLayout",
+                docExpansion: "list" // Expands only the resource list, faster render
+            });
+        };
+    </script>
+</body>
+</html>

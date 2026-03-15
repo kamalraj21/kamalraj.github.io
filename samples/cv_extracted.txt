@@ -1,0 +1,128 @@
+Kamal Raj
+kamal.raj2181@gmail.com
+ 
+9880677291
+ 
+Bengaluru, India
+ 
+LinkedIn Profile
+ 
+Online Portfolio
+ 
+PROFILE SUMMARY
+Accomplished Technical Writer and Content Strategist with over 13 years of experience delivering high-quality 
+documentation across multiple software domains, including AI, IoT, edge computing, cloud technologies, 
+encryption, and API documentation. Expert in content operations, strategy, and information architecture, 
+with a strong track record in leading documentation initiatives, mentoring teams, and modernizing content 
+frameworks. Proficient in tools like Sphinx, Markdown, and Git, with extensive experience in docs-as-code 
+practices. Recognized for reducing developer onboarding time, integrating AI tools into content workflows, 
+and implementing persona-based documentation to enhance usability and user satisfaction. Demonstrated 
+ability to explain complex topics to technical audiences, work in fast-paced environments, and collaborate 
+with cross-functional teams to create accurate, well-organized, and easy-to-use documentation.
+CORE COMPETENCIES
+•Technical Writing | Content Strategy & Operations | Information Architecture
+•UX Writing | Accessibility and Inclusion | User-Centric Documentation
+•Researching and Writing for Developers and Developer Operations
+•Developer Documentation | API Reference Documentation
+•Generative AI Applications | Cloud Technologies | Privacy and Security Engineering | AI and ML Platform 
+Engineering
+•Markdown, RestructuredText, HTML, CSS, JavaScript, and Markdown
+•Editing and Proofreading Technical Documents
+•Collaboration with Cross-functional Teams | Project Management and Team Leadership
+KEY ACHIEVEMENTS
+•Edited, clarified, and enhanced technical documentation written by engineers, contributing to improved 
+writing skills across the team.
+•Successfully navigated fast-paced, constantly changing environments to meet documentation deadlines and 
+project requirements.
+•Defined documentation requirements by collaborating with product managers and engineering leads, 
+resulting in organized, user-friendly information architectures.
+•Reduced developer onboarding time by 25% and accelerated feature release through comprehensive 
+documentation initiatives.
+•Integrated Generative AI tools into workflows, cutting production time by 30%.
+•Modernized content frameworks and implemented persona-based documentation, improving content 
+usability and reducing support tickets by 15%.
+•Initiated the redesign of documentation websites, increasing user satisfaction scores by 35%.
+•Successfully managed the transition to agile documentation processes across multiple organizations.
+PROFESSIONAL EXPERIENCE
+Developer Experience Technical Writer
+Intel Corporation
+•Led documentation for IoT, edge computing, and AI platforms, reducing developer 
+onboarding time by 25%.
+08/2021 – present
+Bengaluru
+•Authored technical documentation, including how-to guides, user guides, API 
+reference documentation, and project-related communications.
+•Collaborated with engineers to create and update documentation for cloud and 
+internal sites.
+•Led documentation projects to improve customer experience by identifying 
+documentation gaps and organizing existing content.
+•Conducted content reviews and editing sessions, providing feedback to engineers 
+to enhance documentation quality.
+•Implemented information architectures to guide users through key journeys in 
+cloud technologies, edge computing, and developer documentation.
+1 / 2
+Senior Technical Writer
+Rakuten
+•Wrote comprehensive documentation for Big Data and AI platforms, including 
+feature guides, how-to guides, and reference documentation.
+02/2021 – 07/2021
+Bengaluru
+•Actively participated in design discussions to incorporate developer feedback and 
+improve documentation quality.
+•Contributed to design thinking and feature development discussions, supporting 
+content strategy enhancements.
+Senior Technical Writer
+Netcracker Technology
+•Managed complex documentation projects to meet deadlines in a fast-paced 
+environment.
+10/2018 – 01/2021
+Bengaluru
+•Rewrote and reorganized existing documentation to align with evolving customer 
+needs and Google style guidelines.
+PREVIOUS ROLES (CONDENSED)
+•Senior Technical Writer | AgilePoint | Nov 2017 – Jun 2018
+•Created DITA-based online help, improving content reusability by 40%.
+•Senior Technical Writer | Evolving Systems | Jun 2015 – May 2016
+•Developed user guides, tutorials, and infographics, reducing training time for new customers by 20%.
+•Technical Writer | Novell Software Development | Jun 2014 – Apr 2015
+•Authored admin guides and tutorials, improving feature adoption by 25%.
+•Technical Writer | Oracle India | Jun 2011 – Feb 2014
+•Created ERP and CRM guides, receiving a 95% satisfaction rate from the implementation team.
+•Product Info Specialist | Unisys India | Jun 2010 – May 2011
+•Rebranded over 1000 pages of legacy documentation, improving readability scores by 40%.
+•Technical Writer | Phantasm Games Studio | Aug 2008 – May 2010
+•Authored game design documents, technical design documents, tools guides, and workflow guides 
+improving cross-team collaboration.
+SKILLS
+Authoring Tools
+RestructuredText, Sphinx, Markdown, Adobe FrameMaker, Arbortext Epic Editor, Adobe RoboHelp, Oxygen 
+XML Author, and Confluence
+Programming
+Python, HTML5, CSS3, Java, and JavaScript
+Version Control
+Git, GitHub, and SVN
+Operating Systems
+Linux and Windows 
+Other Tools
+JIRA, Bugzilla, Adobe Creative Suite, Figma, Microsoft Office Suite
+EDUCATION
+B.Tech in Mechanical Engineering
+Cochin University of Science and Technology
+2000 – 2004
+Cochin
+CERTIFICATES
+Fundamentals of Technical 
+Writing, TWB, Bangalore
+Python for Machine Learning - 
+EICT IIT Roorkee
+Learn API Technical Writing: 
+JSON and XML for Writers - 
+Udemy
+Product Assurance and 
+Security White Belt - Intel 
+Corporation
+The Art of API Documentation 
+- Udemy
+Generative AI for Business 
+Leaders - LinkedIn
+2 / 2

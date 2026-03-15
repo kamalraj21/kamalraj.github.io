@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installing iManager - Writing Sample</title>
+    <link rel="stylesheet" href="styles.css?v=1.1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .doc-content {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: left;
+            line-height: 1.6;
+        }
+        .doc-content h1, .doc-content h2, .doc-content h3 {
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .doc-content p {
+            margin-bottom: 1rem;
+        }
+        .doc-content ul, .doc-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+        .doc-content li {
+            margin-bottom: 0.5rem;
+        }
+        .doc-content pre {
+            background-color: var(--secondary-color);
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+        .doc-content code {
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 0.9em;
+            background-color: rgba(0,0,0,0.05);
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .doc-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+        }
+        .doc-table th, .doc-table td {
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            text-align: left;
+        }
+        .doc-table th {
+            background-color: var(--secondary-color);
+            font-weight: bold;
+        }
+        .note {
+            background-color: rgba(52, 152, 219, 0.1);
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 1.5rem;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #2980b9;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Installing iManager</h1>
+                <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">Profile</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+
+    <section class="section">
+        <div class="doc-content">
+            <h1>Installing iManager</h1>
+            <p>NetIQ iManager provides a global view of your network from a single browser-based tool, allowing you to proactively assess and respond to changing network demands.</p>
+            <p>Using iManager, you can administer NetIQ eDirectory and other NetIQ and third-party products, including Novell Open Enterprise Server, NetIQ Identity Manager, Novell Audit, and BorderManager. This centralized management system minimizes administrative redundancy and overhead, reducing time and costs.</p>
+            
+            <p>This section provides information about:</p>
+            <ul>
+                <li>Server-based and client-based versions of iManager</li>
+                <li>Self-signed certificates</li>
+            </ul>
+
+            <h2>Server-Based and Client-Based Versions of iManager</h2>
+            <p>The traditional server-based version of iManager 2.7.7, commonly called iManager, installs on a server to access an eDirectory tree. The client-based version, called iManager Workstation, installs on a client workstation.</p>
+            <p>Use the following guidelines to determine which version best fits your environment.</p>
+
+            <h3>iManager Workstation</h3>
+            <p>Use iManager Workstation if you have a single administrator who manages eDirectory from a dedicated client workstation, or if you have multiple administrators who require customized plug-ins.</p>
+            <p>You must install plug-ins on each administrator's client workstation, as iManager plug-ins do not automatically synchronize between iManager instances. Key features of iManager Workstation include:</p>
+            <ul>
+                <li><strong>Self-contained deployment:</strong> Setup is fast and simple.</li>
+                <li><strong>Automatic resource management:</strong> It automatically starts and stops required resources during loading and unloading.</li>
+                <li><strong>Cross-platform support:</strong> It installs and runs on various Linux and Windows client workstations.</li>
+                <li><strong>Independent operation:</strong> It has no dependencies on server-based iManager and coexists with other iManager versions on your network.</li>
+            </ul>
+
+            <h3>iManager Server</h3>
+            <p>If you manage eDirectory from multiple client workstations or have multiple administrators, install iManager Server to ensure availability from any connected workstation. Additionally, you only need to install customized plug-ins once per iManager Server.</p>
+            
+            <div class="note">
+                <div class="note-title">Note</div>
+                <p>iManager 2.7.7 Patch 11 installs the iManager 2.7.7 base along with the patch.</p>
+            </div>
+
+            <h2>Supported Platforms for iManager Server</h2>
+            <p>iManager Server supports the following technologies:</p>
+            
+            <h3>Operating Systems</h3>
+            <p>The following table lists the certified and supported operating systems for iManager Server. A <em>certified</em> operating system has completed testing. A <em>supported</em> operating system is pending testing but is expected to function correctly.</p>
+
+            <table class="doc-table">
+                <thead>
+                    <tr>
+                        <th>Certified Server Operating System Version</th>
+                        <th>Supported Operating Systems</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Windows Server 2012, Windows Server 2012 R2 (64-bit)</td>
+                        <td>Supported on later service pack versions</td>
+                        <td>None</td>
+                    </tr>
+                    <tr>
+                        <td>Windows Server 2008 Enterprise Edition SP2 (64-bit)</td>
+                        <td>Supported on later service pack versions</td>
+                        <td>iManager Server runs only in 64-bit mode.</td>
+                    </tr>
+                    <tr>
+                        <td>Windows Server 2008 R2 Enterprise Edition (64-bit)</td>
+                        <td>Supported on later service pack versions</td>
+                        <td>iManager Server runs only in 64-bit mode.</td>
+                    </tr>
+                    <tr>
+                        <td>Windows Server 2008 R2 Standard Edition (64-bit)</td>
+                        <td>Supported on later service pack versions</td>
+                        <td>iManager Server runs only in 64-bit mode.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Application Servers</h3>
+            <p>iManager Server supports Tomcat 7.0.81.</p>
+            <div class="note">
+                <div class="note-title">Caution</div>
+                <p>Do not install the standalone iManager package on a Tomcat server that runs other applications.</p>
+            </div>
+
+            <h3>Browsers</h3>
+            <p>iManager Server supports the following browsers:</p>
+            <ul>
+                <li>Apple Safari 8.0 and 7.0.6</li>
+                <li>Google Chrome 38 through 22</li>
+                <li>Internet Explorer 11, 10 (Normal and Compatibility modes), 9, and 8</li>
+                <li>Mozilla Firefox 33 through 9.0.1, and 4.0.1</li>
+            </ul>
+
+            <h3>Directory Services</h3>
+            <p>iManager supports eDirectory 8.8 and later Support Packs.</p>
+
+            <h2>Configuring Certificates on Linux</h2>
+            <p>Standalone iManager installations include a temporary, self-signed certificate for Tomcat. It expires in one year. Because OpenSSL does not recommend self-signed certificates for production, use this certificate only to get your system up and running securely immediately after installation.</p>
+            <p>Tomcat uses the Java KeyStore (JKS) format by default. The <code>keytool</code> utility cannot import a private key; it only uses self-generated keys. If you use eDirectory, use Novell Certificate Server to generate and manage certificates securely.</p>
+            
+            <div class="note">
+                <div class="note-title">Note</div>
+                <p>These instructions do not apply to OES Linux, which installs both Tomcat and Apache. To replace certificates on OES Linux, see the <em>OES Implementation Guide</em>.</p>
+            </div>
+
+            <p>Follow these steps to create a key pair in eDirectory, export the keys via a PKCS#12 file on Linux, and modify the Tomcat configuration to use the new file.</p>
+
+            <h3>Prerequisites</h3>
+            <p>Ensure you have access to the following paths:</p>
+            <ul>
+                <li>Temporary key pair: <code>/var/opt/novell/novlwww/.keystore</code></li>
+                <li>Trusted roots: <code>/opt/novell/jdk1.7.0_25/jre/lib/security/cacerts</code></li>
+                <li>Tomcat configuration: <code>/etc/opt/novell/tomcat7/server.xml</code></li>
+            </ul>
+
+            <h3>Procedure</h3>
+            <ol>
+                <li>
+                    <p>In iManager, create a new server certificate:</p>
+                    <p>Go to <strong>Novell Certificate Server</strong> &gt; <strong>Create Server Certificate</strong>. Select the appropriate server, specify a nickname, and accept the default settings.</p>
+                </li>
+                <li>
+                    <p>Export the server certificate to the Tomcat home directory (<code>/var/opt/novell/novlwww</code>).</p>
+                </li>
+                <li>
+                    <p>Convert the <code>.pfx</code> file to a <code>.pem</code> file:</p>
+<pre><code>openssl pkcs12 -in newtomcert.pfx -out newtomcert.pem</code></pre>
+                    <p>Enter the certificate password from the previous step, and then define a password for the new <code>.pem</code> file.</p>
+                </li>
+                <li>
+                    <p>Convert the <code>.pem</code> file to a <code>.p12</code> file:</p>
+<pre><code>openssl pkcs12 -export -in newtomcert.pem -out newtomcert.p12 -name "New Tomcat"</code></pre>
+                    <p>Enter the password specified in Step 3, and define a password for the new <code>.p12</code> file.</p>
+                </li>
+                <li>
+                    <p>Stop the Tomcat service:</p>
+<pre><code>/etc/init.d/novell-tomcat7 stop</code></pre>
+                </li>
+                <li>
+                    <p>Open <code>/etc/opt/novell/tomcat7.0.42/server.xml</code> in a text editor and add the <code>keystoreType</code>, <code>keystoreFile</code>, and <code>keystorePass</code> attributes to the Connector configuration. For example:</p>
+<pre><code>&lt;Connector
+  className="org.apache.coyote.tomcat7.CoyoteConnector"
+  port="8443" minProcessors="5" maxProcessors="75"
+  enableLookups="true"
+  acceptCount="100" debug="0" scheme="https" secure="true"
+  useURIValidationHack="false" disableUploadTimeout="true"&gt;
+  &lt;Factory
+    className="org.apache.coyote.tomcat7.CoyoteServerSocketFactory"
+    clientAuth="false" protocol="TLS" keystoreType="PKCS12"
+    keystoreFile="/var/opt/novell/novlwww/newtomcert.p12"
+    keystorePass="password" /&gt;
+&lt;/Connector&gt;</code></pre>
+                </li>
+                <li>
+                    <p>Set ownership and permissions for the <code>.p12</code> file:</p>
+<pre><code>chown novlwww:novlwww newtomcert.p12
+chmod 654 newtomcert.p12</code></pre>
+                </li>
+                <li>
+                    <p>Start the Tomcat service:</p>
+<pre><code>/etc/init.d/novell-tomcat7 start</code></pre>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <a href="portfolio.html" class="btn-back-sticky"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+
+    <footer>
+        <p>&copy; 2024 Kamal Raj | Technical Writer Portfolio</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
