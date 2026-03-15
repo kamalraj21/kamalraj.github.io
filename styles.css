@@ -26,8 +26,8 @@
     --header-bg: rgba(11, 17, 33, 0.9); /* Darker glass header */
     --header-text: #ffffff;
     --card-bg: #151e32; /* Elevated dark blue-grey for cards */
-    --primary-color: #8b5cf6; /* Vibrant Violet for premium feel */
-    --primary-hover: #a78bfa; /* Lighter violet on hover */
+    --primary-color: #64ffda; /* Elegant pastel teal with high contrast */
+    --primary-hover: #1de9b6; /* Slightly deeper teal on hover */
     --border-color: #2a3449; /* Subtle borders */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.7);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.6), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
