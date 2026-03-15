@@ -211,6 +211,10 @@ header nav a:hover {
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
 }
 
+[data-theme="dark"] .portfolio-item img {
+    filter: brightness(0) invert(1) opacity(0.85) drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+}
+
 .portfolio-item h3 {
     margin: 0 0 10px 0;
     font-size: 1.15rem;
