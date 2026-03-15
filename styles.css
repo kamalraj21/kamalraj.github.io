@@ -447,3 +447,64 @@ footer {
     background-color: var(--primary-hover);
     transform: translateY(-3px);
 }
+
+/* Print CSS for PDF Resume Export */
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 11pt;
+    }
+    
+    header, footer, .theme-toggle, .btn-download-cv, .btn-back-sticky {
+        display: none !important;
+    }
+    
+    .section, .cv-section {
+        box-shadow: none !important;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+    }
+    
+    a {
+        color: black !important;
+        text-decoration: none !important;
+    }
+    
+    .timeline-item, .cv-header {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    .cv-header h2 {
+        border-bottom: 2px solid black !important;
+        color: black !important;
+    }
+    
+    .timeline {
+        border-left: 2px solid black !important;
+    }
+    
+    .timeline-item::before {
+        border-color: black !important;
+        background-color: white !important;
+    }
+    
+    h1, h2, h3, h4, .role-title, .duration {
+        color: black !important;
+    }
+    
+    .skill-category h4 {
+        border-bottom: 1px solid black !important;
+    }
+
+    .skill-category li::before {
+        color: black !important;
+    }
+    
+    @page {
+        margin: 1.5cm;
+    }
+}
