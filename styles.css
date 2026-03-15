@@ -395,7 +395,7 @@ footer {
 
 .filter-btn:hover, .filter-btn.active {
     background: var(--primary-color);
-    color: white;
+    color: var(--btn-text-color);
     border-color: var(--primary-color);
 }
 
