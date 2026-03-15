@@ -22,41 +22,64 @@
             margin-bottom: 0.5rem;
             color: var(--primary-color);
         }
-        .cv-experience-item {
+        .timeline {
+            border-left: 2px solid var(--primary-color);
+            padding-left: 2rem;
+            margin-left: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .timeline-item {
+            position: relative;
             margin-bottom: 2.5rem;
             padding-bottom: 2rem;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px dashed var(--border-color);
         }
-        .cv-experience-item:last-child {
+        .timeline-item:last-child {
             border-bottom: none;
             padding-bottom: 0;
+            margin-bottom: 0;
         }
-        .cv-experience-item h3 {
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: calc(-2rem - 9px);
+            top: 0.3rem;
+            width: 12px;
+            height: 12px;
+            background-color: var(--card-bg);
+            border: 3px solid var(--primary-color);
+            border-radius: 50%;
+            transition: background-color var(--transition-speed);
+        }
+        .timeline-item:hover::before {
+            background-color: var(--primary-color);
+        }
+        .timeline-item h3 {
             margin-bottom: 0.2rem;
             color: var(--text-color);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .cv-experience-item .role-title {
+        .timeline-item .role-title {
             font-size: 1.2rem;
             font-weight: bold;
         }
-        .cv-experience-item .duration {
+        .timeline-item .duration {
             font-size: 0.95rem;
             color: #666;
             font-weight: normal;
         }
-        .cv-experience-item h4 {
+        .timeline-item h4 {
             margin-top: 0;
             color: var(--primary-color);
             font-weight: 500;
             margin-bottom: 1rem;
         }
-        .cv-experience-item ul {
+        .timeline-item ul {
             padding-left: 1.5rem;
         }
-        .cv-experience-item li {
+        .timeline-item li {
             margin-bottom: 0.5rem;
         }
         .skills-grid-cv {
@@ -147,76 +170,111 @@
                     </div>
                 </div>
             </div>
-
             <div class="cv-header">
                 <h2>Professional Experience</h2>
                 
-                <div class="cv-experience-item">
-                    <h3>
-                        <span class="role-title">Staff Technical Writer</span>
-                        <span class="duration">Current</span>
-                    </h3>
-                    <h4>Salesforce | Bangalore, India</h4>
-                    <ul>
-                        <li><strong>Release & Content Management:</strong> Lead end-to-end documentation releases spanning Communications, Financial Services, Public Sector Solutions, and Missionforce clouds. Handle comprehensive UI text reviews, data model/flow reviews, release notes, feature documentation, and Trailhead modules.</li>
-                        <li><strong>GenAI Integration & Operations:</strong> Developed scalable content delivery pipelines utilizing advanced Generative AI tools (Cursor, Claude Code, Gemini, Writer.ai). Authored specific "Skills for Claude Code" customized for technical writing tasks and content experience workflows.</li>
-                        <li><strong>AI Advocacy & PoCs:</strong> Contributed to AI innovations showcased at the Salesforce AI Expo. Developed functional Python PoCs to streamline processes via AI-enabled workflows (both autonomous and human-in-the-loop), enabling automated updates at scale.</li>
-                        <li><strong>Leadership & Mentorship:</strong> Direct entire release cycles, managing the onboarding, training, and strategic alignment of junior and mid-level technical writers. Manage complex environments utilizing OxygenXML DITA, Perforce, and active docs-as-code CI/CD principles.</li>
-                    </ul>
-                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>
+                            <span class="role-title">Staff Technical Writer</span>
+                            <span class="duration">Current</span>
+                        </h3>
+                        <h4>Salesforce | Bangalore, India</h4>
+                        <ul>
+                            <li><strong>Release & Content Management:</strong> Lead end-to-end documentation releases spanning Communications, Financial Services, Public Sector Solutions, and Missionforce clouds. Handle comprehensive UI text reviews, data model/flow reviews, release notes, feature documentation, and Trailhead modules.</li>
+                            <li><strong>GenAI Integration & Operations:</strong> Developed scalable content delivery pipelines utilizing advanced Generative AI tools (Cursor, Claude Code, Gemini, Writer.ai). Authored specific "Skills for Claude Code" customized for technical writing tasks and content experience workflows.</li>
+                            <li><strong>AI Advocacy & PoCs:</strong> Contributed to AI innovations showcased at the Salesforce AI Expo. Developed functional Python PoCs to streamline processes via AI-enabled workflows (both autonomous and human-in-the-loop), enabling automated updates at scale.</li>
+                            <li><strong>Leadership & Mentorship:</strong> Direct entire release cycles, managing the onboarding, training, and strategic alignment of junior and mid-level technical writers. Manage complex environments utilizing OxygenXML DITA, Perforce, and active docs-as-code CI/CD principles.</li>
+                        </ul>
+                    </div>
 
-                <div class="cv-experience-item">
-                    <h3>
-                        <span class="role-title">Developer Experience Technical Writer</span>
-                        <span class="duration">Aug 2021 – Recent</span>
-                    </h3>
-                    <h4>Intel Corporation | Bengaluru, India</h4>
-                    <ul>
-                        <li>Led documentation for IoT, edge computing, and AI platforms, reducing developer onboarding time by 25%.</li>
-                        <li>Authored technical documentation, including how-to guides, API reference documentation, and project communications for cloud and internal sites.</li>
-                        <li>Implemented information architectures to guide users through key journeys in cloud technologies and edge computing.</li>
-                    </ul>
-                </div>
+                    <div class="timeline-item">
+                        <h3>
+                            <span class="role-title">Developer Experience Technical Writer</span>
+                            <span class="duration">Aug 2021 – Nov 2024</span>
+                        </h3>
+                        <h4>Intel Corporation | Bengaluru, India</h4>
+                        <ul>
+                            <li>Led documentation for IoT, edge computing, and AI platforms, reducing developer onboarding time by 25%.</li>
+                            <li>Authored technical documentation, including how-to guides, API reference documentation, and project communications for cloud and internal sites.</li>
+                            <li>Implemented information architectures to guide users through key journeys in cloud technologies and edge computing.</li>
+                        </ul>
+                    </div>
 
-                <div class="cv-experience-item">
-                    <h3>
-                        <span class="role-title">Senior Technical Writer</span>
-                        <span class="duration">Feb 2021 – Jul 2021</span>
-                    </h3>
-                    <h4>Rakuten | Bengaluru, India</h4>
-                    <ul>
-                        <li>Wrote comprehensive documentation for Big Data and AI platforms, including feature guides, how-to guides, and reference materials.</li>
-                        <li>Contributed to design thinking and feature development discussions to incorporate developer feedback and enhance content strategy.</li>
-                    </ul>
-                </div>
+                    <div class="timeline-item">
+                        <h3>
+                            <span class="role-title">Senior Technical Writer</span>
+                            <span class="duration">Feb 2021 – Jul 2021</span>
+                        </h3>
+                        <h4>Rakuten | Bengaluru, India</h4>
+                        <ul>
+                            <li>Wrote comprehensive documentation for Big Data and AI platforms, including feature guides, how-to guides, and reference materials.</li>
+                            <li>Contributed to design thinking and feature development discussions to incorporate developer feedback and enhance content strategy.</li>
+                        </ul>
+                    </div>
 
-                <div class="cv-experience-item">
-                    <h3>
-                        <span class="role-title">Senior Technical Writer</span>
-                        <span class="duration">Oct 2018 – Jan 2021</span>
-                    </h3>
-                    <h4>Netcracker Technology | Bengaluru, India</h4>
-                    <ul>
-                        <li>Managed complex documentation projects to meet deadlines in a fast-paced environment.</li>
-                        <li>Rewrote and reorganized existing documentation to align with evolving customer needs and Google style guidelines.</li>
-                    </ul>
-                </div>
+                    <div class="timeline-item">
+                        <h3>
+                            <span class="role-title">Senior Technical Writer</span>
+                            <span class="duration">Oct 2018 – Jan 2021</span>
+                        </h3>
+                        <h4>Netcracker Technology | Bengaluru, India</h4>
+                        <ul>
+                            <li>Managed complex documentation projects to meet deadlines in a fast-paced environment.</li>
+                            <li>Rewrote and reorganized existing documentation to align with evolving customer needs and Google style guidelines.</li>
+                        </ul>
+                    </div>
 
-                <div class="cv-experience-item">
-                    <h3>
-                        <span class="role-title">Senior Technical Writer</span>
-                        <span class="duration">Earlier Career Highlights</span>
-                    </h3>
-                    <h4>AgilePoint, Evolving Systems, Novell, Oracle & Unisys</h4>
-                    <ul>
-                        <li><strong>AgilePoint:</strong> Created DITA-based online help, improving content reusability by 40%.</li>
-                        <li><strong>Evolving Systems:</strong> Developed user guides, tutorials, and infographics, reducing training time for new customers.</li>
-                        <li><strong>Novell Software Development:</strong> Authored admin guides and tutorials, improving feature adoption by 25%.</li>
-                        <li><strong>Oracle India:</strong> Created ERP and CRM guides, receiving a 95% satisfaction rate from the implementation team.</li>
-                        <li><strong>Unisys India:</strong> Rebranded over 1000 pages of legacy documentation, improving readability scores by 40%.</li>
-                    </ul>
+                    <div class="timeline-item">
+                        <h3>
+                            <span class="role-title">Senior Technical Writer</span>
+                            <span class="duration">Earlier Career Highlights</span>
+                        </h3>
+                        <h4>AgilePoint, Evolving Systems, Novell, Oracle, Unisys & Phantasm Games</h4>
+                        <ul>
+                            <li><strong>AgilePoint:</strong> Created DITA-based online help, improving content reusability by 40%.</li>
+                            <li><strong>Evolving Systems:</strong> Developed user guides, tutorials, and infographics, reducing training time for new customers.</li>
+                            <li><strong>Novell Software Development:</strong> Authored admin guides and tutorials, improving feature adoption by 25%.</li>
+                            <li><strong>Oracle India:</strong> Created ERP and CRM guides, receiving a 95% satisfaction rate from the implementation team.</li>
+                            <li><strong>Unisys India:</strong> Rebranded over 1000 pages of legacy documentation, improving readability scores by 40%.</li>
+                            <li><strong>Phantasm Games Studio:</strong> Authored game design documents, technical design documents, and tools guides, improving cross-team collaboration.</li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
 
+            <div class="cv-header">
+                <h2>Key Achievements</h2>
+                <ul style="line-height: 1.8;">
+                    <li><strong>Reduced developer onboarding time by 25%</strong> and accelerated feature release through comprehensive documentation initiatives.</li>
+                    <li><strong>Integrated Generative AI tools</strong> into workflows, cutting production time by 30%.</li>
+                    <li><strong>Modernized content frameworks</strong> and implemented persona-based documentation, improving content usability and reducing support tickets by 15%.</li>
+                    <li><strong>Initiated the redesign</strong> of documentation websites, increasing user satisfaction scores by 35%.</li>
+                    <li><strong>Successfully managed</strong> the transition to agile documentation processes across multiple organizations.</li>
+                    <li><strong>Edited and clarified</strong> technical documentation drafted by engineers, actively contributing to improved writing skills across the engineering team.</li>
+                </ul>
+            </div>
+
+            <div class="cv-header">
+                <h2>Certifications</h2>
+                <div class="skills-grid-cv">
+                    <div class="skill-category">
+                        <h4>Technical & Software</h4>
+                        <ul>
+                            <li><strong>Python for Machine Learning</strong> – EICT IIT Roorkee</li>
+                            <li><strong>Learn API Technical Writing: JSON & XML</strong> – Udemy</li>
+                            <li><strong>The Art of API Documentation</strong> – Udemy</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Strategy & Leadership</h4>
+                        <ul>
+                            <li><strong>Generative AI for Business Leaders</strong> – LinkedIn</li>
+                            <li><strong>Product Assurance and Security White Belt</strong> – Intel Corporation</li>
+                            <li><strong>Fundamentals of Technical Writing</strong> – TWB, Bangalore</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
