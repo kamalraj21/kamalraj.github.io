@@ -505,6 +505,10 @@ footer {
     }
     
     @page {
-        margin: 1.5cm;
+        margin: 0; /* setting margin to 0 hides the browser-generated url headers/footers */
+    }
+    
+    body {
+        margin: 1.5cm !important;
     }
 }
